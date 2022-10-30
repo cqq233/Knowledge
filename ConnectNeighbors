@@ -17,3 +17,7 @@
             }
         }
     }
+
+    private int calcIndex(int row, int col) {
+        return (row - 1) * gridwidth + col;
+    }

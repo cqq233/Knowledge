@@ -1,0 +1,19 @@
+
+    private int[] dx = { -1, 0, 0, 1 };
+    private int[] dy = { 0, -1, 1, 0 };
+
+
+   private void connectNeighbours(int row, int col) {
+        int newRow, newCol;
+        int currIndex = calcIndex(row, col);
+
+        for (int i = 0; i < 4; i++) {
+            newRow = row + dx[i];
+            newCol = row + dy[i];
+
+            if (ifInGrid(newRow, newCol) && isOpen(newRow, newCol)) {
+                uf.union(calcIndex(newRow, newCol), currIndex);
+                ufForFull.union(calcIndex(newRow, newCol), currIndex);
+            }
+        }
+    }

@@ -2,6 +2,7 @@
     private int[] dx = { -1, 0, 0, 1 };
     private int[] dy = { 0, -1, 1, 0 };
 
+    //用两个dx，dy数组来访问正东南西北。
 
    private void connectNeighbours(int row, int col) {
         int newRow, newCol;
@@ -18,6 +19,7 @@
         }
     }
 
+    //该元素所处的位置，
     private int calcIndex(int row, int col) {
         return (row - 1) * gridwidth + col;
     }
